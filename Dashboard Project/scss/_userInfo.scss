@@ -1,0 +1,27 @@
+.userInfo {
+    grid-area: userInfo;
+    background: $dark;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin: 0.2em 0.2em 0 0.2em;
+    padding: 3em;
+    box-shadow: inset 0px 0px 15px 15px rgba(0,0,0,0.1);
+
+    & > *:not(:last-child) {
+        margin-bottom: 0.4em;
+    }
+
+    & > ion-icon {
+        font-size: 1.6em;
+        color: $primary;
+    }
+}

@@ -1,0 +1,20 @@
+$primary: #7B96C4;
+$secondary: #97ABCD;
+$highlight: #00C9FF;
+$dark: #1F232A;
+$bg: #21324F;
+
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 768px) { @content };
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 800px) { @content };
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 801px) { @content };
+    }
+}

@@ -1,0 +1,80 @@
+@import "variables";
+
+.nav {
+    grid-area: nav;
+    background: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    min-height: 10vh;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+
+    &_Left {
+        flex: 3;
+
+        & > ion-icon {
+            font-size: 1.2rem;
+            color: $primary;
+            margin-right: 0.6em;
+
+            @include responsive(tablet) {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                color: $highlight;
+                cursor: pointer;
+            }
+        }
+
+        @include responsive(tablet) {
+            flex: 1;
+        }
+
+    }
+
+    &_Right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    &_User {
+        flex: 1;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    color: $primary;
+    white-space: nowrap;
+    letter-spacing: 1px;
+
+    & > ion-icon {
+        font-size: 1.8rem;
+
+        @include responsive(tablet) {
+            font-size: 1.2rem;
+        }
+    }
+
+    @include responsive(tablet) {
+        font-size: 0.6rem;
+    }
+}
+
+.navicon {
+    color: $primary;
+    cursor: pointer;
+
+    @include responsive(desktop) {
+        display: none;
+    }
+}
+

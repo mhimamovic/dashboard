@@ -1,0 +1,157 @@
+@import "variables";
+@import "typeface";
+@import "nav";
+@import "sidebar";
+@import "main";
+@import "userInfo";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $dark;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.3;
+    scrollbar-width: thin;
+    scrollbar-color: $primary transparent;
+}
+
+body.theme {
+    background: #eee;
+    
+    .nav {
+        background: #eee;
+    }
+
+    .userInfo {
+        background: rgb(255, 255, 255);
+    }
+
+    .sidebar {
+        background: linear-gradient(to right, #fff, #eee);
+    }
+
+    .circle-bg {
+        stroke: $secondary;
+    }
+
+    .button {
+        background: #f6f6f6;
+        box-shadow: 0px 0px 10px #9c9c9c83;
+    }
+
+    .label {
+        background: #00c8ff17;
+    }
+
+    .logo {
+        background: rgba(0, 0, 0, 0.012);
+    }
+
+    .settings {
+        background: rgba(0, 0, 0, 0.012);
+    }
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent ;
+    border-radius: 1px;
+    border: 3px solid transparent;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas: 
+                        "sidebar nav nav nav"
+                        "sidebar main main userInfo";
+    height: 100vh;
+
+    @include responsive(tablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr 3fr;
+        grid-template-areas: 
+                            "nav"
+                            "main"
+                            "userInfo"
+    }
+}
+
+.button {
+    background: $highlight;
+    font-size: 0.8rem;
+    padding: 0.6em 1.6em;
+    border-radius: 30px;
+    text-decoration: none;
+    color: $dark;
+    box-shadow: 0px 0px 10px #00c8ff83;
+    white-space: nowrap;
+    
+    &:hover {
+        box-shadow: 0px 0px 10px #00c8ff;
+    }
+
+    @include responsive(tablet) {
+        font-size: 0.7rem;
+    }
+}
+
+// Theme Color Changer
+
+.themeColor {
+    display: inline-block;
+    height: 100%;
+
+    @include responsive(mobile) {
+        margin-top: 0.6em;
+    }
+    
+}
+
+.label {
+    width: 50px;
+    height: 14px;
+    background: $bg;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    //padding: 5px;
+    position: relative;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background: $secondary;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 200ms linear;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(30px);
+}
+
+.sun {
+    color: #f39c12;
+    font-size: 1.2rem;
+}
+
+.moon {
+    color: #f1c40f;
+    font-size: 1.2rem;
+}

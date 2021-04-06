@@ -1,0 +1,32 @@
+.heading {
+    color: $primary;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.smallheading {
+    color: $primary;
+    //white-space: nowrap;
+}
+
+.subHeading {
+    color: $secondary;
+}
+
+.numbersHeading {
+    color: $primary;
+}
+
+.description {
+    color: $secondary;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}  
+
+.link {
+    color: $secondary;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}

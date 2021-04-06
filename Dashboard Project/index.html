@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="nav">
+            <div class="nav_Left">
+                <ion-icon name="menu-outline" class="navicon" onclick="toggleSidebar()"></ion-icon>
+                <ion-icon name="notifications-outline"></ion-icon>
+                <ion-icon name="chatbox-outline"></ion-icon>
+                <div class="themeColor">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                        <ion-icon name="sunny" class="sun"></ion-icon>
+                        <ion-icon name="moon" class="moon"></ion-icon>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="nav_Right">
+                <a href="" class="button">New Campaign</a>
+            </div>
+            <div class="nav_User">
+                <span class="user"><ion-icon name="person-circle-outline"></ion-icon>&nbsp;JOHN DOE</span>
+            </div>
+        </nav>
+
+        <div id="sidebar" class="sidebar">
+            <div class="logo">
+                <ion-icon name="diamond-outline" class="logo-icon"></ion-icon>
+                <ion-icon name="close-circle-outline" class="close-icon" id="sidebarIcon" onclick="closeSidebar()"></ion-icon>
+            </div>
+            <div class="menu">
+                <div class="menu_Links active-link">
+                    <ion-icon name="cellular-outline"></ion-icon>
+                    <a href="#" class="link">Dashboard</a>
+                </div>
+                <div class="menu_Links">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <a href="#" class="link">Ad Calendar</a>
+                </div>
+                <div class="menu_Links">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <a href="#" class="link">Community</a>
+                </div>
+                <div class="menu_Links">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    <a href="#" class="link">Campaigns</a>
+                </div>
+                <div class="menu_Links">
+                    <ion-icon name="easel-outline"></ion-icon>
+                    <a href="#" class="link">Projects</a>
+                </div>
+                <div class="menu_Links">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <a href="#" class="link">Settings</a>
+                </div>
+            </div>
+            <div class="settings">
+                <ion-icon name="file-tray-full-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main_Info">
+                <div class="title">
+                    <h2 class="heading">Statistics</h2>
+                    <h6 class="description">March 01 - March 31</h6>
+                </div>
+
+                <div class="main_Filters">
+                    <span class="filter"><a href="#">Type: Notifications</a> <ion-icon name="chevron-down-outline"></ion-icon></span>
+                    <span class="filter"><a href="#">Sort: Comments</a> <ion-icon name="chevron-down-outline"></ion-icon></span>
+                </div>
+            </div>
+
+            <img src="./images/graph.png" alt="" class="image">
+
+            <div class="main_Stats">
+                <div class="stat">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                          <path class="circle-bg"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <path class="circle"
+                            stroke-dasharray="36, 100"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <text x="18" y="20.35" class="percentage">36%</text>
+                        </svg>
+                      </div>
+                    <h6 class="smallheading">CONVERSION RATE</h6>
+                </div>
+                <div class="stat">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                          <path class="circle-bg"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <path class="circle"
+                            stroke-dasharray="26, 100"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <text x="18" y="20.35" class="percentage">26%</text>
+                        </svg>
+                      </div>
+                    <h6 class="smallheading">CLICK THROUGH RATE</h6>
+                </div>
+                <div class="stat">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                          <path class="circle-bg"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <path class="circle"
+                            stroke-dasharray="72, 100"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <text x="18" y="20.35" class="percentage">72%</text>
+                        </svg>
+                      </div>
+                    <h6 class="smallheading">AWARENESS INCREASE</h6>
+                </div>
+                <div class="stat">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                          <path class="circle-bg"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <path class="circle"
+                            stroke-dasharray="16, 100"
+                            d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <text x="18" y="20.35" class="percentage">16%</text>
+                        </svg>
+                      </div>
+                    <h6 class="smallheading">GROWTH RATE</h6>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+        <div class="userInfo">
+            <div class="notifications">
+                <ion-icon name="notifications-outline"></ion-icon>
+                <h3 class="subHeading">Notifications</h3>
+                <h2 class="numbersHeading">1053</h2>
+            </div>
+            <div class="notifications">
+                <ion-icon name="mail-outline"></ion-icon>
+                <h3 class="subHeading">Messages</h3>
+                <h2 class="numbersHeading">28</h2>
+            </div>
+            <div class="notifications">
+                <ion-icon name="eye-outline"></ion-icon>
+                <h3 class="subHeading">Views</h3>
+                <h2 class="numbersHeading">19562</h2>
+            </div>
+        </div>
+
+    </div>
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
